@@ -1,2 +1,2 @@
-# C-
+# C++
 Learn basics of C++
