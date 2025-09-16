@@ -1,20 +1,23 @@
-//a friend class can access private and protected members of other classes when declared as friend
-//eg/ friend class class_name
+// a friend class can access private and protected members of other classes when declared as friend
+// eg/ friend class class_name
 
-//https://learn.microsoft.com/en-us/cpp/cpp/friend-cpp?view=msvc-170
-//https://www.geeksforgeeks.org/cpp/friend-class-function-cpp/
+// https://learn.microsoft.com/en-us/cpp/cpp/friend-cpp?view=msvc-170
+// https://www.geeksforgeeks.org/cpp/friend-class-function-cpp/
 
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-class Chai{
-    private:
-        string teaName;
-        int servings;
-    public:
-        Chai(string name, int serve): teaName(name), servings(serve){}//single line param const
+class Chai
+{
+private:
+    string teaName;
+    int servings;
+
+public:
+    // single line param constructor function//single line param constructor function
+    Chai(string name, int serve) : teaName(name), servings(serve) {}
 
     /*public:
         Chai(string name, int serve){
@@ -23,27 +26,34 @@ class Chai{
         }
         */
 
-        friend bool compareServings(const Chai &chai1,const Chai &chai2);
+    friend bool compareServings(const Chai &chai1, const Chai &chai2);
 
-       void display() const{
-           cout << "teaname: " << teaName << endl;
-        }
-    };
-
-    bool compareServings(const Chai &chai1, const Chai &chai2){
-        return chai1.servings > chai2.servings;
+    void display() const
+    {
+        cout << "teaname: " << teaName << endl;
     }
+};
 
-int main(){
-    Chai masalaChai("masala chaui", 14);
-    Chai gingerChai("giner chai", 8);
+bool compareServings(const Chai &chai1, const Chai &chai2)
+{
+    return chai1.servings > chai2.servings;
+}
+
+int main()
+{
+    Chai masalaChai("Masala chai", 14);
+    Chai gingerChai("Ginger chai", 8);
 
     masalaChai.display();
     gingerChai.display();
 
-    if(compareServings(masalaChai, gingerChai)){
+    // comparing same class, get fnc exposed by friend fnc access to member level access to fnc arent a class
+    if (compareServings(masalaChai, gingerChai))
+    {
         cout << "Masala Chai is having MORE servings";
-    }else{
+    }
+    else
+    {
         cout << "Masala Chai is having LESS servings";
     }
     return 0;

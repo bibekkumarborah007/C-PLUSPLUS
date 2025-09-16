@@ -1,5 +1,5 @@
-//4.Logical Operators
-//Challenge: Create a program that checks if a user is eligible for a tea subcsription discount. The disocunt applies if the user is either student or has purchased more than 15 cups. Ask the user to input their status (student or not) and their cup counts 
+// 4.Logical Operators
+// Challenge: Create a program that checks if a user is eligible for a tea subcsription discount. The disocunt applies if the user is either student or has purchased more than 15 cups. Ask the user to input their status (student or not) and their cup counts
 
 // #include<iostream>
 // #include<string>
@@ -27,7 +27,7 @@
 //             cout << "Not Eligible for discount";
 //         }
 //     }
-    
+
 //     return 0;
 // }
 
@@ -40,13 +40,12 @@
 //     cout << "Are you a student (Enter 1 for Yes, 0 for No): ";
 //     cin >> isStudent;
 
-    
 //     // if(isStudent == 1 || cups > 15){
 //         //     cout << "You are eligible for a discount \n" << endl;
 //         // }else {
 //             //     cout << "You are NOT eligible for a discount " << endl;
 //             // }
-            
+
 //             if (isStudent == 1)
 //             {
 //                 cout << "You are eligible for a discount" << endl;
@@ -56,28 +55,27 @@
 //                 cout << "How many cups of tea have you purchased? ";
 //                 cin >> cups;
 //                 if (cups > 15)
-//                 {   
+//                 {
 //                     cout << "You are eligible for discount" << endl;
 //                 }
 //                 else
 //                 {
 //                     cout << "You are not eligible for discount" << endl;
 //                 }
-                
+
 //             }
 //         else
 //             {
 //                 cout << "Invalid input. Please enter 1 for YEs or 0 for No." << endl;
 //             }
-    
-    
+
 //     return 0;
 // }
 
-
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     bool isStudent;
     int cups;
 
@@ -97,4 +95,4 @@ int main(){
     return 0;
 }
 
-//bitwise opearation
+// bitwise opearation

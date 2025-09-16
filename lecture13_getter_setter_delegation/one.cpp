@@ -1,72 +1,87 @@
-//13. Getter Setter and Delegation
-//class properties access more control in what value add or recieve
+// 13. Getter Setter and Delegation
+// class properties access more control in what value add or recieve
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
-class Chai{
-    private:
-        string teaName;
-        int servings;
-        vector<string> ingrediants;
-    public:
-        Chai(){
-            teaName = "Unknown tea";
-            servings = 1;
-            ingrediants = {"water", "tea leaves",};
-        }
-        Chai(string name, int serve, vector<string> ingr){
-            teaName = name;
-            servings= serve;
-            ingrediants = ingr;
-        }
+class Chai
+{
+private:
+    string teaName;
+    int servings;
+    vector<string> ingrediants;
 
-        //getter gets value : access to private var or control way
-        string getTeaName(){
-            return teaName;
-        }
+public:
+    Chai()
+    {
+        teaName = "Unknown tea";
+        servings = 1;
+        ingrediants = {
+            "water",
+            "tea leaves",
+        };
+    }
+    Chai(string name, int serve, vector<string> ingr)
+    {
+        teaName = name;
+        servings = serve;
+        ingrediants = ingr;
+    }
 
-        //setter set value
-        void setTeaName(string name){
-            //logic INR format
-            teaName = name;
-        }
+    // getter gets value : access to private var or control way
+    string getTeaName()
+    {
+        return teaName;
+    }
 
-        //getter for servings
-        int getServings(){
-            return servings;
-        }
+    // setter set value
+    void setTeaName(string name)
+    {
+        // logic INR format
+        teaName = name;
+    }
 
-        //setter for servings
-        void setServings(int serve){
-            servings = serve;
-        }
+    // getter for servings
+    int getServings()
+    {
+        return servings;
+    }
 
-        //getter for vector
-        vector<string> getIngredients(){
-            return ingrediants;
-        }
+    // setter for servings
+    void setServings(int serve)
+    {
+        servings = serve;
+    }
 
-        //setter for vector
-        void setIngredinats(vector<string> ingr){
-            ingrediants = ingr;
-        }
+    // getter for vector ingrediants
+    vector<string> getIngredients()
+    {
+        return ingrediants;
+    }
 
-        void displayChaiDetails(){
-            cout << "Tea Name: " << teaName << endl;
-            cout << "Servings: " << servings << endl;
-            cout << "Ingrediants ";
-            for(string i : ingrediants){
-                cout << i << " " << endl;
-            }
-            cout << endl;
+    // setter for vector ingrediants
+    void setIngredinats(vector<string> ingr)
+    {
+        ingrediants = ingr;
+    }
+
+    void displayChaiDetails()
+    {
+        cout << "Tea Name: " << teaName << endl;
+        cout << "Servings: " << servings << endl;
+        cout << "Ingrediants ";
+        for (string i : ingrediants)
+        {
+            cout << i << " " << endl;
         }
+        cout << endl;
+    }
 };
 
-
-int main(){
+int main()
+{
     Chai chai;
     chai.setTeaName("Ginger Tea");
     chai.displayChaiDetails();

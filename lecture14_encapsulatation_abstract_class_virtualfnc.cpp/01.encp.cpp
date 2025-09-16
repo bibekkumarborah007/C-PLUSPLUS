@@ -1,58 +1,62 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class BankAccount{
-    private:
-        string accountNumber;
-        double balance;
-    
-    public:
-        BankAccount(string accNum, double initalBalance){
-            accountNumber = accNum;
-            balance = initalBalance;
-        }
+class BankAccount
+{
+private:
+    string accountNumber;
+    double balance;
 
-        //getter
-        double getBalaance() const {
-            return balance;
-        }
+public:
+    // constructor
+    BankAccount(string accNum, double initalBalance)
+    {
+        accountNumber = accNum;
+        balance = initalBalance;
+    }
 
-        //method to deposit money
-        void deposit(double amount){
-            if (amount>0)
-            {
-                balance += amount;
-                cout << "Deposited: " << amount << endl;
-            }
-            else
-            {
-                cout << "Invalid deposit amount";
-            }
-            
-        }
+    // getter
+    double getBalance() const
+    {
+        return balance;
+    }
 
-        //method to withdraw the ammount
-        void withdraw(double amount){
-            if (amount>0 && amount <= balance)
-            {
-                balance -= amount;
-                cout << "Balance after withdrawn amount is: " << balance << endl;
-            }
-            else
-            {
-                cout << "Invalid withdrawn amount";
-            }
-            
+    // method to deposit money
+    void deposit(double amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+            cout << "Deposited: " << amount << endl;
         }
+        else
+        {
+            cout << "Invalid deposit amount";
+        }
+    }
+
+    // method to withdraw the ammount
+    void withdraw(double amount)
+    {
+        if (amount > 0 && amount <= balance)
+        {
+            balance -= amount;
+            cout << "Balance after withdrawn amount is: " << balance << endl;
+        }
+        else
+        {
+            cout << "Invalid withdrawn amount";
+        }
+    }
 };
 
-int main(){
+int main()
+{
     BankAccount myAccount("1229988", 500);
 
-    myAccount.getBalaance();
+    myAccount.getBalance();
     myAccount.deposit(200);
     myAccount.withdraw(100);
 
-    
     return 0;
 }

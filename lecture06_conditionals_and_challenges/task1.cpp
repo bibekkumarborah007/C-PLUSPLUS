@@ -1,10 +1,11 @@
-//if
-//1. Wap that chekcs if the user wants to order Green Tea. If the user types "Green Tea", the program should confirm thier order
+// if
+// 1. Wap that chekcs if the user wants to order Green Tea. If the user types "Green Tea", the program should confirm thier order
 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
-int main(){
+int main()
+{
     string order;
     cout << "Enter your order for tea: ";
     getline(cin, order);

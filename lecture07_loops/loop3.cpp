@@ -1,8 +1,9 @@
-//3. for loop: wap that prints the brewing instruction for making 5 cups of tea. The brewing process should be printed once for each cup using for loop
+// 3. for loop: wap that prints the brewing instruction for making 5 cups of tea. The brewing process should be printed once for each cup using for loop
 
 #include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     int teaCups = 5;
 
     for (int i = 1; i <= teaCups; i++)
@@ -11,6 +12,6 @@ int main(){
     }
 
     cout << "Outside of loop at 6";
-    
-    return 0; 
+
+    return 0;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include <algorithm>
 #include <numeric>
 #include <iterator>
@@ -15,7 +16,7 @@ struct Employee
 };
 
 void displayEmployee(const Employee &emp)
-{ // Obj ref f with obj emp only ref not pointer address like &Employee//Obj ref f with obj emp only ref not pointer address like &Employee
+{ // Obj ref f with obj emp only ref not pointer address like &Employee
     cout << "ID: " << emp.id << " , Name: " << emp.name << " , Salary: $" << emp.salary << endl;
 }
 
@@ -28,11 +29,10 @@ int main()
         {104, "borah", 60000},
         {105, "kumar", 70000}};
 
-    sort(employees.begin(), employees.end(), [](const Employee &e1, const Employee &e2) { // lamda fnc without name
-        return e1.salary > e2.salary;
-    });
+    sort(employees.begin(), employees.end(), [](const Employee &e1, const Employee &e2)
+         { return e1.salary > e2.salary; });
 
-    cout << "Employees sorted by salary -> Highest to lowest" << endl;
+    cout << "Employee sorted by salary -> Highest to lowest" << endl;
 
     for_each(employees.begin(), employees.end(), displayEmployee);
 
